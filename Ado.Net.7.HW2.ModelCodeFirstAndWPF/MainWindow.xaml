@@ -5,8 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ado.Net._7.HW2.ModelCodeFirstAndWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="625">
     <Grid>
-        
+      
+        <TabControl x:Name="TabControl1">
+            <TabItem Header="Delete Data from Database">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+        <ListView x:Name="ListViewData">
+                        <ListView.View>
+                            <GridView x:Name="GridViewData">
+                                <GridView.Columns>
+                                    <GridViewColumn Header=""></GridViewColumn>
+                                    <GridViewColumn Header=""></GridViewColumn>
+                                    <GridViewColumn Header=""></GridViewColumn>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Height="30" Width="120" Grid.Row="1" Content="Delete Row"></Button>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Add Data to Database">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="400"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <ListView Margin="5" Grid.Column="0" x:Name="ListViewData2">
+                        <ListView.View>
+                            <GridView x:Name="GridViewData2">
+                                <GridView.Columns>
+                                    <GridViewColumn Header=""></GridViewColumn>
+                                    <GridViewColumn Header=""></GridViewColumn>
+                                    <GridViewColumn Header=""></GridViewColumn>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <StackPanel Grid.Column="1">
+                        <Label Height="30" Margin="5"> Name Of Field:</Label>
+                        <Label Height="30" Margin="5">Name Of Field:</Label>
+                        <Label Height="30" Margin="5">Name Of Field:</Label>
+                        <Label Height="30" Margin="5">Name Of Field:</Label>
+                        <Label Height="30" Margin="5">Name Of Field:</Label>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <TextBox Height="30" Margin="5"></TextBox>
+                        <TextBox Height="30" Margin="5"></TextBox>
+                        <TextBox Height="30" Margin="5"></TextBox>
+                        <TextBox Height="30" Margin="5"></TextBox>
+                        <TextBox Height="30" Margin="5"></TextBox>
+                 <Button Margin="5" Height="30" Content="Change Data"></Button>
+                    </StackPanel>
+
+                </Grid>
+                
+                
+
+            </TabItem>
+            <TabItem Header="Change Data in Database"></TabItem>
+        </TabControl>
     </Grid>
 </Window>
