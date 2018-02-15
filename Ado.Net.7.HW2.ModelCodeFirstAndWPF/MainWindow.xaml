@@ -19,14 +19,14 @@
                         <ListView.View>
                             <GridView x:Name="GridViewData">
                                 <GridView.Columns>
-                                    <GridViewColumn Header=""></GridViewColumn>
-                                    <GridViewColumn Header=""></GridViewColumn>
-                                    <GridViewColumn Header=""></GridViewColumn>
+                                    <GridViewColumn Header="intManufacturerID" DisplayMemberBinding="{Binding Path= intManufacturerID}"></GridViewColumn>
+                                    <GridViewColumn Header="strManufacturerChecklistId" DisplayMemberBinding="{Binding Path= strManufacturerChecklistId}"></GridViewColumn>
+                                    <GridViewColumn Header="strName" DisplayMemberBinding="{Binding Path= strName}"></GridViewColumn>
                                 </GridView.Columns>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button Height="30" Width="120" Grid.Row="1" Content="Delete Row"></Button>
+                    <Button Height="30" Width="120" Grid.Row="1" Content="Delete Row" x:Name="ButtonDelete" Click="ButtonDelete_OnClick"></Button>
 
                 </Grid>
 
@@ -34,7 +34,7 @@
             <TabItem Header="Add Data to Database">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="400"></ColumnDefinition>
+                        <ColumnDefinition Width="300"></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
@@ -42,27 +42,25 @@
                         <ListView.View>
                             <GridView x:Name="GridViewData2">
                                 <GridView.Columns>
-                                    <GridViewColumn Header=""></GridViewColumn>
-                                    <GridViewColumn Header=""></GridViewColumn>
-                                    <GridViewColumn Header=""></GridViewColumn>
+                                    <GridViewColumn Header="intManufacturerID" DisplayMemberBinding="{Binding Path= intManufacturerID}"></GridViewColumn>
+                                    <GridViewColumn Header="strManufacturerChecklistId" DisplayMemberBinding="{Binding Path= strManufacturerChecklistId}"></GridViewColumn>
+                                    <GridViewColumn Header="strName" DisplayMemberBinding="{Binding Path= strName}"></GridViewColumn>
                                 </GridView.Columns>
                             </GridView>
                         </ListView.View>
                     </ListView>
                     <StackPanel Grid.Column="1">
-                        <Label Height="30" Margin="5"> Name Of Field:</Label>
-                        <Label Height="30" Margin="5">Name Of Field:</Label>
-                        <Label Height="30" Margin="5">Name Of Field:</Label>
-                        <Label Height="30" Margin="5">Name Of Field:</Label>
-                        <Label Height="30" Margin="5">Name Of Field:</Label>
+                        <Label Height="30" Margin="5"> ID:</Label>
+                        <Label Height="30" Margin="5">Manufacturer ID:</Label>
+                        <Label Height="30" Margin="5">Manufacturer Checklist ID:</Label>
+                        <Label Height="30" Margin="5">Name:</Label>
                     </StackPanel>
                     <StackPanel Grid.Column="2">
-                        <TextBox Height="30" Margin="5"></TextBox>
-                        <TextBox Height="30" Margin="5"></TextBox>
-                        <TextBox Height="30" Margin="5"></TextBox>
-                        <TextBox Height="30" Margin="5"></TextBox>
-                        <TextBox Height="30" Margin="5"></TextBox>
-                 <Button Margin="5" Height="30" Content="Change Data"></Button>
+                        <TextBox Height="30" Margin="5" Name ="TextBoxId" TextChanged="TextBoxId_TextChanged"></TextBox>
+                        <TextBox Height="30" Margin="5" Name="TextBoxManufId"></TextBox>
+                        <TextBox Height="30" Margin="5" Name ="TextBoxChecklistId"></TextBox>
+                        <TextBox Height="30" Margin="5" Name ="TextBoxName" ></TextBox>
+                        <Button Margin="5" Height="30" Content="Change Data" Click="Button_Click"></Button>
                     </StackPanel>
 
                 </Grid>
@@ -70,7 +68,7 @@
                 
 
             </TabItem>
-            <TabItem Header="Change Data in Database"></TabItem>
+           
         </TabControl>
     </Grid>
 </Window>
